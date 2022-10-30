@@ -1,0 +1,8 @@
+<p *ngFor="let message of messages">
+    <b>{{ message.from.name }}</b>: {{ message.text }}
+</p>
+
+<form [formGroup]="messageForm" class="message-form">
+    <input type="text" id="message" name="message" size="10" formControlName="message">
+    <button type="button" (click)="sendMessage()">Send Message</button>
+</form>
